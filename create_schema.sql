@@ -1,4 +1,5 @@
 DROP TABLE IF EXISTS customers;
+DROP TABLE IF EXISTS statements;
 CREATE TABLE customers (
     id serial PRIMARY KEY,
     first text,
@@ -12,7 +13,6 @@ CREATE TABLE customers (
     current_balance_cents integer
 );
 
-DROP TABLE IF EXISTS statements;
 CREATE TABLE statements (
     id serial PRIMARY KEY,
     customer_id integer,
